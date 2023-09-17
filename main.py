@@ -1,14 +1,13 @@
-def main():
-    n = int(input())
-    arr = []
-    for i in range(n):
-        a, b = map(int, input().split())
-        arr.append((b, a))
-    arr.sort()
-    arr.reverse()
-    for i in arr:
-        print(i[1], i[0])
+def get_perimeter(a):
+    return a*4
 
+def get_square(a):
+    return a*a
+
+def main():
+    arr = map(int, input().split())
+    for i in arr:
+        print(get_square(i), get_perimeter(i))
 
 if __name__ == "__main__":
     main()
