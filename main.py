@@ -8,12 +8,13 @@ def get_hypotenuse(a, b):
     return (a * a + b * b) ** 0.5
 
 def main():
-    ab = int(input())
-    ac = int(input())
-    cd = int(input())
-    hyp1 = get_hypotenuse(ab, ac)
-    hyp2 = get_hypotenuse(hyp1, cd)
-    print('%.6f' % float(ab+ac+cd+hyp2))
+    k = int(input())
+    points = []
+    for i in range(k):
+        values = list(map(int, input().split()))
+        points.append(values)
+    points.sort(key=lambda x: (-x[1], x[0]))
+    print(*[f'{x[0]} {x[1]}' for x in points], sep = '\n')
 
 if __name__ == "__main__":
     main()
