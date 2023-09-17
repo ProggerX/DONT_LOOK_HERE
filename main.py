@@ -10,7 +10,7 @@ def main():
                     b = False
         except:
             print(0)
-            sys.exit
+            sys.exit()
 
         if b:
             print(1)
