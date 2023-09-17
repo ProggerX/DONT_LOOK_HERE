@@ -1,11 +1,17 @@
+import sys
 def main():
     str = input()
     arr = str.split('.')
     if len(arr) == 4:
         b = True
-        for i in arr:
-            if int(i) < 0 or int(i) > 255:
-                b = False
+        try:
+            for i in arr:
+                if int(i) < 0 or int(i) > 255:
+                    b = False
+        except:
+            print(0)
+            sys.exit
+
         if b:
             print(1)
         else: print(0)
