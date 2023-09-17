@@ -1,10 +1,14 @@
 def main():
     n = int(input())
-    arr = map(int, input().split())
-    arr2 = []
+    arr = []
+    for i in range(n):
+        a, b = map(int, input().split())
+        arr.append((b, a))
+    arr.sort()
+    arr.reverse()
     for i in arr:
-        if i % 2 == 0: arr2.append(i)
-    print(*arr2)
+        print(i[1], i[0])
+
 
 if __name__ == "__main__":
     main()
